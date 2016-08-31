@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xmliu.littlevideodemo.MainActivity">
+
+    <com.xmliu.littlevideodemo.FullVideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+
+
+        <ImageView
+            android:id="@+id/video_thumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_image_loading"/>
+
+        <Button
+            android:id="@+id/video_play_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@drawable/video_play_btn"
+            />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/video_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="50dp"
+            android:padding="5dp"
+            android:background="@android:color/white"
+            android:src="@drawable/video_delete_icon"
+            android:visibility="gone"
+           />
+
+        <TextView
+            android:id="@+id/video_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="15dp"
+            android:background="@android:color/holo_green_light"
+            android:text="录制"
+            android:textColor="@android:color/white"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

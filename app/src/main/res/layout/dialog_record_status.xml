@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+                android:id="@+id/record_cancel_layout"
+              android:layout_height="match_parent">
+    <TextView
+
+        android:id="@+id/record_cancel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:text="下滑取消"
+        android:padding="5dp"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+
+        android:layout_alignParentBottom="true"
+        android:id="@+id/record_cancel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@android:color/holo_red_dark"
+        android:padding="5dp"
+        android:text="松开取消"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>
