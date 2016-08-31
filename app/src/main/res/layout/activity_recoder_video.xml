@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:background="@android:color/transparent"
               android:orientation="vertical">
 
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:visibility="visible">
+
+        </SurfaceView>
+
+
+        <ImageView
+            android:id="@+id/zoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/record_focus_zoom"
+            />
+
+
+    </RelativeLayout>
     <RelativeLayout
         android:id="@+id/video_recoder_bottom_layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:background="@android:color/black">
+        android:background="@color/five_black">
 
         <ImageView
             android:id="@+id/cancel"
@@ -40,51 +67,28 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:src="@drawable/switch_camera_icon"
             />
 
     </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="320dp">
-
-        <SurfaceView
-            android:id="@+id/videoView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:visibility="visible">
-
-        </SurfaceView>
-
-
-        <ImageView
-            android:id="@+id/zoom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:padding="5dp"
-            android:src="@drawable/record_focus_zoom"
-            android:layout_alignParentBottom="true"
-            />
-
-
-    </RelativeLayout>
-
     <ProgressBar
         android:id="@+id/pb_progress"
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:max="12"
+        android:layout_above="@+id/record_bottom_layout"
         android:progressDrawable="@drawable/record_video_progress"/>
 
     <RelativeLayout
+        android:id="@+id/record_bottom_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@android:color/black"
+        android:paddingBottom="30dp"
+        android:paddingTop="30dp"
+        android:background="@color/five_black"
         android:orientation="vertical">
 
         <Button
@@ -100,4 +104,4 @@
 
     </RelativeLayout>
 
-</LinearLayout>
+</RelativeLayout>
