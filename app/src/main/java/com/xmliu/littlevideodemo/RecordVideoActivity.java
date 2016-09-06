@@ -288,7 +288,7 @@ public class RecordVideoActivity extends Activity implements
             videoFile.createNewFile();
 
             recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);// 视频源
-//			recorder.setAudioSource(MediaRecorder.AudioSource.MIC); // 录音源为麦克风
+			recorder.setAudioSource(MediaRecorder.AudioSource.MIC); // 录音源为麦克风
 
             CamcorderProfile profile = CamcorderProfile
                     .get(CamcorderProfile.QUALITY_HIGH);
@@ -299,7 +299,7 @@ public class RecordVideoActivity extends Activity implements
             recorder.setAudioSamplingRate(profile.audioSampleRate);
 
             recorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
-//			recorder.setAudioEncoder(profile.audioCodec);
+			recorder.setAudioEncoder(profile.audioCodec);
             recorder.setVideoEncoder(profile.videoCodec);
 
             recorder.setVideoSize(640, 480);// 视频尺寸
